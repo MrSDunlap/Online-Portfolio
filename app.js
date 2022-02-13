@@ -48,6 +48,7 @@ let scene = new ScrollMagic.Scene({
 const navBar = document.querySelector('nav');
 const homeSection = document.querySelector('.home');
 const descSection = document.querySelector('.description');
+const bars = document.querySelector('.bars');
 
 const faders = document.querySelectorAll('.fadeIn');
 
@@ -61,8 +62,12 @@ const sectionOneObserver =
         entries.forEach(entry => {
             if(!entry.isIntersecting) {
                 navBar.classList.add('navScrolled');
+                topBar.classList.add('barX');
+                bottomBar.classList.add('barX');
             } else {
                 navBar.classList.remove('navScrolled');
+                topBar.classList.remove('barX');
+                bottomBar.classList.remove('barX');
             }
         });
 }, sectionOneOptions);
@@ -104,8 +109,14 @@ burger.addEventListener('click', ()=> {
     topBar.classList.toggle('topRotation');
     bottomBar.classList.toggle('bottomRotation');
     bottomBar.classList.toggle('barX');
-    topBar.classList.toggle('barX');
+    topBar.classList.toggle('barX');    
+});
 
-    
+navMenu.addEventListener('click', ()=> {
+    navMenu.classList.toggle('showMenu');
+    topBar.classList.toggle('topRotation');
+    bottomBar.classList.toggle('bottomRotation');
+    bottomBar.classList.toggle('barX');
+    topBar.classList.toggle('barX');
 });
 

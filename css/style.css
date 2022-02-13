@@ -8,11 +8,30 @@
 }
 
 :root {
-  --title: 5.6em;
+  --darkShade: #324739;
+  --neutralShade: #65806D;
+  --lightShade: #a7bfae;
+  --primaryDark: #2a2a2a;
+  --primaryLight: #f1ede7;
+}
+
+:root .home .info h1, .home .info :root h1 {
+  font-size: 3.6rem;
+  font-weight: 900;
+}
+
+:root .home .info h3, .home .info :root h3 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+:root .home .info p, .home .info :root p {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 nav {
-  --text:white;
+  color: var(--primaryLight);
   --background: transparent;
   position: fixed;
   display: -webkit-box;
@@ -21,7 +40,7 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 40px;
+  height: 60px;
   width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -33,7 +52,7 @@ nav {
 }
 
 nav .logo {
-  font-size: 18px;
+  font-size: 2rem;
   font-weight: bold;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -58,20 +77,39 @@ nav .navLinks {
 }
 
 nav .navLinks a {
-  color: var(--text);
+  position: relative;
+  color: var(--primaryLight);
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: 500;
   list-style: none;
   text-decoration: none;
   margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-nav .navLinks a:hover {
-  color: #65806D;
+nav .navLinks a::after {
+  content: '';
+  background: var(--primaryLight);
+  position: absolute;
+  width: 0%;
+  height: 2.5px;
+  bottom: -4px;
+  -webkit-transition: .1s ease-in;
+  transition: .1s ease-in;
+}
+
+nav .navLinks a:hover::after {
+  width: 100%;
 }
 
 .navScrolled {
-  --text: #3B342F;
+  color: var(--primaryDark);
   --background: white;
   -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
@@ -93,20 +131,17 @@ nav .navLinks a:hover {
 
 .home .info h1 {
   text-align: center;
-  font-size: var(--title);
   color: #3B342F;
 }
 
 .home .info h3 {
   color: #fff;
   text-align: center;
-  font-size: 70px;
 }
 
 .home .info p {
   color: #3B342F;
   text-align: center;
-  font-size: 20px;
   padding-top: 15px;
 }
 
@@ -709,7 +744,7 @@ nav .navLinks a:hover {
   .burgerMenu .bars {
     width: 30px;
     height: 3px;
-    background: var(--text);
+    background: var(--primaryLight);
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
   }
@@ -722,7 +757,7 @@ nav .navLinks a:hover {
             transform: rotate(-225deg) translate(-4.5px, 4.5px);
   }
   .burgerMenu .barX {
-    background: white;
+    background: var(--primaryDark);
   }
 }
 /*# sourceMappingURL=style.css.map */
