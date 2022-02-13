@@ -25,6 +25,11 @@
   font-weight: 700;
 }
 
+:root .contact form button, .contact form :root button {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 :root .home .info p, .home .info :root p {
   font-size: 1rem;
   font-weight: 400;
@@ -603,17 +608,17 @@ nav .navLinks a:hover::after {
 }
 
 .contact form input {
-  padding: 8px;
-  margin: 2px;
+  padding: 12px;
+  margin: 5px;
   border-radius: 5px;
+  font-size: 1.125rem;
   border-style: none;
-  color: #3B342F;
+  color: var(--primaryDark);
   background: white 0.5;
 }
 
 .contact form button {
   padding: 10px;
-  font-size: 14px;
   font-weight: 600;
   letter-spacing: 2px;
   background: #65806D;

@@ -463,16 +463,17 @@ nav {
         max-width: 500px;
 
         input {
-            padding: 8px;
-            margin: 2px;
+            padding: 12px;
+            margin: 5px;
             border-radius: 5px;
+            font-size: 1.125rem;
             border-style: none;
-            color: #3B342F;
+            color: var(--primaryDark);
             background: white 0.5;
         }
         button {
             padding: 10px;
-            font-size: 14px;
+            @extend%headerFive;
             font-weight: 600;
             letter-spacing: 2px;
             background: #65806D;
