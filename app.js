@@ -105,5 +105,7 @@ burger.addEventListener('click', ()=> {
     bottomBar.classList.toggle('bottomRotation');
     bottomBar.classList.toggle('barX');
     topBar.classList.toggle('barX');
+
+    
 });
 
