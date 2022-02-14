@@ -80,6 +80,23 @@ nav .navContainer .logo a {
   text-decoration: none;
   text-transform: uppercase;
   color: inherit;
+  position: relative;
+}
+
+nav .navContainer .logo a::after {
+  content: '';
+  position: absolute;
+  left: -5%;
+  top: 45%;
+  width: 0%;
+  height: 5px;
+  background: var(--primaryLight);
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+}
+
+nav .navContainer .logo a:hover::after {
+  width: 110%;
 }
 
 nav .navContainer .navLinks {

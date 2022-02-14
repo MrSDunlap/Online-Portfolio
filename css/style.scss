@@ -72,6 +72,20 @@ nav {
                 text-decoration: none;
                 text-transform: uppercase;
                 color: inherit;
+                position: relative;
+            }
+            a::after {
+                content: '';
+                position: absolute;
+                left: -5%;
+                top: 45%;
+                width: 0%;
+                height: 5px;
+                background: var(--primaryLight);
+                transition: .1s ease-in-out;
+            }
+            a:hover::after {
+                width: 110%;
             }
         }
 

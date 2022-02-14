@@ -121,3 +121,11 @@ navMenu.addEventListener('click', ()=> {
     topBar.classList.toggle('barX');
 });
 
+
+$('body').on('click', '.dashboard_leftNav_category a', function() {
+    var link = $(this).attr('showSection'); //changed from let link
+    var show = $('[section="'+link+'"]');
+    $('[section]').hide();
+    $('body').find(show).fadeIn();
+    $('html,body').scrollTop(0);
+  });
