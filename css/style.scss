@@ -215,7 +215,7 @@ nav {
     margin: 40px 0px;
     width: 100%;
     background:white;
-    
+    z-index: 4;
 
     .aContainer {
         margin-top: 100px;
@@ -225,6 +225,7 @@ nav {
         gap: 10px;
         max-height: auto;
         max-width: 1000px;
+        
         .aLeft {
             margin: 50px 0;
             display: flex;
@@ -359,6 +360,26 @@ nav {
             }
         }
     }
+    .about-curves {
+        position: absolute;
+        bottom: -95px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    
+    .about-curves svg {
+        position: relative;
+        display: block;
+        width: calc(210% + 1.3px);
+        height: 55px;
+        transform: rotateY(180deg);
+    }
+    
+    .about-curves .shape-fill {
+        fill: white;
+    }
 }
 //WORK SECTION--------------------------------------------------------------------|
 .work {
@@ -371,7 +392,7 @@ nav {
     background: var(--primaryDark);
     z-index: 5;
     .wContainer {
-        margin: 50px 0px;
+        margin: 50px 0px 0px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -468,7 +489,7 @@ nav {
     width: 100%;
     background-image: url(/imgs/wood.jpg);
     height: auto;
-    padding: 50px;
+    padding: 50px 0;
     background-size: cover;
 
     .cContainer {
@@ -480,7 +501,7 @@ nav {
         .cTitle {
             color: white;
             @extend%headerOne;
-            padding-bottom: 30px;
+            padding: 50px 0 30px;
         }
     }
     form {
