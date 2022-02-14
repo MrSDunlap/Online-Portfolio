@@ -30,11 +30,11 @@ tl2
     .to('.about',3, {top:'0%'}, '-=3')
     .to('.hBox1',3, {y:-450, rotation: '45deg'},'-=3')
     .to('.hBox2',3, {y:-250, rotation: '-45deg'},'-=3')
-    .to('.scrollDown',3, {y:-200},'-=3');
+    .to('.scrollDown',3, {y:-300},'-=3');
 
 let scene = new ScrollMagic.Scene({
     triggerElement: '.heroBlank',
-    duration: '80%',
+    duration: '100%',
     triggerHook: 1,
 })
     .setTween(tl2)
@@ -49,6 +49,7 @@ const navBar = document.querySelector('nav');
 const homeSection = document.querySelector('.home');
 const descSection = document.querySelector('.description');
 const bars = document.querySelector('.bars');
+const links = document.querySelectorAll('.links');
 
 const faders = document.querySelectorAll('.fadeIn');
 
@@ -64,6 +65,7 @@ const sectionOneObserver =
                 navBar.classList.add('navScrolled');
                 topBar.classList.add('barX');
                 bottomBar.classList.add('barX');
+                
             } else {
                 navBar.classList.remove('navScrolled');
                 topBar.classList.remove('barX');
@@ -99,7 +101,6 @@ faders.forEach(fader => {
 //BURGER MENU STUFF-----------------------------------------|
 let burger = document.querySelector('.burgerMenu');
 let navMenu = document.querySelector('.navLinks');
-let links = document.querySelectorAll('.links');
 let topBar = document.querySelector('.top');
 let bottomBar = document.querySelector('.bottom');
 

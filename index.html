@@ -13,17 +13,19 @@
 </head>
 <body>
     <nav>
-        <div class="logo"><a href="./index.html">dunlap</a></div>
-        <div class="burgerMenu">
-            <div class="top bars"></div>
-            <div class="bottom bars"></div>
+        <div class="navContainer">
+            <div class="logo"><a href="./index.html">dunlap</a></div>
+            <div class="burgerMenu">
+                <div class="top bars"></div>
+                <div class="bottom bars"></div>
+            </div>
+            <ul class="navLinks">
+                <li><a class="links" href="#home">Home</a></li>
+                <li><a class="links" href="#about">About</a></li>
+                <li><a class="links" href="#work">Work</a></li>
+                <li><a class="links" href="#contact">Contact</a></li>
+            </ul>
         </div>
-        <ul class="navLinks">
-            <li><a class="links" href="#home">Home</a></li>
-            <li><a class="links" href="#about">About</a></li>
-            <li><a class="links" href="#work">Work</a></li>
-            <li><a class="links" href="#contact">Contact</a></li>
-        </ul>
     </nav>
     <section class="home" id="home">
         <div class="info">
@@ -45,7 +47,7 @@
         <div class="wContainer">
             <div class="w-leftText">
                 <h1 class="w-Title">Work</h1>
-                <p class="w-Description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, dolor itaque tenetur eum iste maiores, aspernatur at nemo totam sit earum consectetur molestiae dolorum beatae iusto suscipit quisquam molestias labore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates praesentium sint perspiciatis a cum modi inventore dolorum doloribus provident repellat, nulla explicabo veniam sequi tempore rerum quod atque consectetur deserunt quae qui distinctio tempora officia cupiditate assumenda. <br>Doloribus accusantium dolor voluptatum dolorem, ut ab consectetur quasi fugiat quam rem consequuntur totam itaque fuga! Harum quisquam illum vitae repellat, officiis rerum repellendus suscipit pariatur ducimus iusto dignissimos veniam voluptas rem tenetur modi. Odit tenetur eaque quisquam dolorem esse ipsa natus eligendi.</p>
+                <p class="w-Description">I believe I'm successful if I can to produce aesthetic forms that contain swift function.</p>
             </div>
             <div class="projects">
                 <a href="./" class="projectOne">
@@ -69,7 +71,20 @@
                         <p class="projectDesc">Website Design</p>
                     </div>
                 </a>
+                <a href="./" class="projectThree">
+                    <img src="./imgs/portfolioProject.jpg" alt="">
+                    <div class="txtContainer">
+                        <div class="projectName">Portfolio</div>
+                        <p class="projectDesc">Website Design</p>
+                    </div>
+                </a>
             </div>
+        </div>
+
+        <div class="work-curves">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
         </div>
     </section>
     <section class="about" id="about">
@@ -134,7 +149,7 @@
                 <input type="email" class="email" placeholder="Your email.." name="_replyto" required>
                 <!-- message -->
                 <label for="message"></label>
-                <input type="text" class="cMessage" name="message" placeholder="Write here" style="height: 100px;" required>
+                <textarea type="text" class="cMessage" name="message" placeholder="Your message.." required></textarea>
 
                 <button type="submit" value="Submit">Submit</button>
             </form>
