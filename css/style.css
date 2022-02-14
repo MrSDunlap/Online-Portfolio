@@ -20,17 +20,17 @@
   font-weight: 900;
 }
 
-:root .home .info h1, .home .info :root h1, :root .work .wContainer .w-leftText .w-Title, .work .wContainer .w-leftText :root .w-Title, :root .contact .cContainer .cTitle, .contact .cContainer :root .cTitle {
+:root .home .info h1, .home .info :root h1, :root .about .aContainer .aLeft .aTitle, .about .aContainer .aLeft :root .aTitle, :root .work .wContainer .w-leftText .w-Title, .work .wContainer .w-leftText :root .w-Title, :root .contact .cContainer .cTitle, .contact .cContainer :root .cTitle {
   font-size: 3rem;
   font-weight: 700;
 }
 
-:root .contact form button, .contact form :root button {
+:root .about .aContainer .aLeft .moreAbout, .about .aContainer .aLeft :root .moreAbout, :root .about .aContainer .aLeft .aSkillsTitle, .about .aContainer .aLeft :root .aSkillsTitle, :root .contact form button, .contact form :root button {
   font-size: 1.5rem;
   font-weight: 500;
 }
 
-:root .home .info p, .home .info :root p, :root .work .wContainer .w-leftText .w-Description, .work .wContainer .w-leftText :root .w-Description {
+:root .home .info p, .home .info :root p, :root .about .aContainer .aLeft .aDescription, .about .aContainer .aLeft :root .aDescription, :root .work .wContainer .w-leftText .w-Description, .work .wContainer .w-leftText :root .w-Description {
   font-size: 1rem;
   font-weight: 400;
 }
@@ -278,21 +278,22 @@ nav .navContainer .navLinks a:hover::after {
 }
 
 .about .aContainer {
-  background: brown;
   margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 5% 5%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 5%;
-  max-height: 90%;
-  max-width: 90%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+  max-height: auto;
+  max-width: 1000px;
 }
 
 .about .aContainer .aLeft {
+  margin: 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -300,47 +301,56 @@ nav .navContainer .navLinks a:hover::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-width: 45%;
+  max-width: 450px;
 }
 
 .about .aContainer .aLeft .aTitle {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 30px;
-  color: #3B342F;
+  color: var(--neutralShade);
+  padding-top: 175px;
 }
 
-.about .aContainer .aLeft .a-rightText {
-  font-size: 12px;
-  padding: 15px 0px;
-  color: #3B342F;
+.about .aContainer .aLeft .aDescription {
+  color: var(--primaryDark);
+  padding: 30px 0 25px;
+}
+
+.about .aContainer .aLeft .moreAbout {
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--neutralShade)), to(var(--darkShade)));
+  background: linear-gradient(var(--neutralShade), var(--darkShade));
+  color: var(--primaryLight);
+  text-decoration: none;
+  padding: 16px;
+  width: 250px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.about .aContainer .aLeft .moreAbout:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--lightShade)), to(var(--neutralShade)));
+  background: linear-gradient(var(--lightShade), var(--neutralShade));
+  color: var(--primaryDark);
 }
 
 .about .aContainer .aLeft .aSkillsTitle {
-  font-weight: 700;
-  font-size: 14px;
-  color: #3B342F;
+  color: var(--neutralShade);
+  opacity: 0;
 }
 
 .about .aContainer .aLeft .aSkills {
+  opacity: 0;
   width: 100%;
 }
 
 .about .aContainer .aLeft .aSkills .skillName {
-  font-size: 12px;
+  font-size: .9rem;
 }
 
 .about .aContainer .aLeft .aSkills .fullBar {
   width: 100%;
-  height: 12px;
-  background: #DFC5B3;
-  border-radius: 5px;
+  height: 20px;
+  border: solid 1px var(--primaryDark);
+  border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -350,55 +360,55 @@ nav .navContainer .navLinks a:hover::after {
 }
 
 .about .aContainer .aLeft .aSkills .fullBar .xd {
-  margin-left: 1px;
-  height: 8px;
+  margin-left: 4px;
+  height: 12px;
   width: 90%;
-  background: #65806D;
-  border-radius: 5px;
+  background: var(--lightShade);
+  border-radius: 10px;
 }
 
 .about .aContainer .aLeft .aSkills .fullBar .photoshop {
-  margin-left: 1px;
-  height: 8px;
+  margin-left: 4px;
+  height: 12px;
   width: 80%;
-  background: #65806D;
-  border-radius: 5px;
+  background: var(--lightShade);
+  border-radius: 10px;
 }
 
 .about .aContainer .aLeft .aSkills .fullBar .illustrator {
-  margin-left: 1px;
-  height: 8px;
+  margin-left: 4px;
+  height: 12px;
   width: 85%;
-  background: #65806D;
-  border-radius: 5px;
+  background: var(--lightShade);
+  border-radius: 10px;
 }
 
 .about .aContainer .aLeft .aSkills .fullBar .html {
-  margin-left: 1px;
-  height: 8px;
+  margin-left: 4px;
+  height: 12px;
   width: 90%;
-  background: #65806D;
-  border-radius: 5px;
+  background: var(--lightShade);
+  border-radius: 10px;
 }
 
 .about .aContainer .aLeft .aSkills .fullBar .css {
-  margin-left: 1px;
-  height: 8px;
+  margin-left: 4px;
+  height: 12px;
   width: 80%;
-  background: #65806D;
-  border-radius: 5px;
+  background: var(--lightShade);
+  border-radius: 10px;
 }
 
 .about .aContainer .aLeft .aSkills .fullBar .javascript {
-  margin-left: 1px;
-  height: 8px;
+  margin-left: 4px;
+  height: 12px;
   width: 40%;
-  background: #65806D;
-  border-radius: 5px;
+  background: var(--lightShade);
+  border-radius: 10px;
 }
 
 .about .aContainer .aRight {
-  min-width: 45%;
+  max-width: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,23 +422,14 @@ nav .navContainer .navLinks a:hover::after {
 }
 
 .about .aContainer .aRight .imgContainer {
-  width: 100%;
-  height: 350px;
+  height: 100%;
 }
 
 .about .aContainer .aRight .aImg {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: 400px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 0% 25%;
-     object-position: 0% 25%;
-}
-
-.about .aContainer .aRight .aDescription {
-  font-size: 12px;
-  padding: 20px 0px;
-  color: #3B342F;
 }
 
 .about .aContainer .aRight .moreAbout {
