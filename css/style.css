@@ -20,17 +20,17 @@
   font-weight: 900;
 }
 
-:root .home .info h1, .home .info :root h1, :root .about .aContainer .aLeft .aTitle, .about .aContainer .aLeft :root .aTitle, :root .work .wContainer .w-leftText .w-Title, .work .wContainer .w-leftText :root .w-Title, :root .contact .cContainer .cTitle, .contact .cContainer :root .cTitle {
+:root .home .info h1, .home .info :root h1, :root .about .about-container__main .text-container h2, .about .about-container__main .text-container :root h2, :root .work .wContainer .w-leftText .w-Title, .work .wContainer .w-leftText :root .w-Title, :root .contact .cContainer .cTitle, .contact .cContainer :root .cTitle {
   font-size: 3rem;
   font-weight: 700;
 }
 
-:root .about .aContainer .aLeft .moreAbout, .about .aContainer .aLeft :root .moreAbout, :root .about .aContainer .aLeft .aSkillsTitle, .about .aContainer .aLeft :root .aSkillsTitle, :root .contact form button, .contact form :root button {
+:root .about .about-container__main__text a, .about .about-container__main__text :root a, :root .about .about-container__main .skillBox .aSkillsTitle, .about .about-container__main .skillBox :root .aSkillsTitle, :root .contact form button, .contact form :root button {
   font-size: 1.5rem;
   font-weight: 500;
 }
 
-:root .home .info p, .home .info :root p, :root .about .aContainer .aLeft .aDescription, .about .aContainer .aLeft :root .aDescription, :root .work .wContainer .w-leftText .w-Description, .work .wContainer .w-leftText :root .w-Description {
+:root .home .info p, .home .info :root p, :root .about .about-container__main__text p, .about .about-container__main__text :root p, :root .about .about-container__main .additional-info, .about .about-container__main :root .additional-info, :root .work .wContainer .w-leftText .w-Description, .work .wContainer .w-leftText :root .w-Description {
   font-size: 1rem;
   font-weight: 400;
 }
@@ -278,76 +278,141 @@ nav .navContainer .navLinks a:hover::after {
   z-index: 4;
 }
 
-.about .aContainer {
-  margin-top: 100px;
+.about .about-container {
+  margin-top: 50px;
+  max-height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 10px;
-  max-height: auto;
-  max-width: 1000px;
+  width: 100%;
 }
 
-.about .aContainer .aLeft {
-  margin: 50px 0;
+.about .about-container__main {
+  width: 1000px;
+  height: auto;
+  margin: 0 5vw;
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.about .about-container__main .text-container {
+  min-width: 375px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  min-height: 250px;
+}
+
+.about .about-container__main .text-container h2 {
+  color: var(--darkShade);
+  position: absolute;
+  top: 300px;
+}
+
+.about .about-container__main .img-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-width: 450px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
 }
 
-.about .aContainer .aLeft .aTitle {
-  color: var(--neutralShade);
-  padding-top: 175px;
+.about .about-container__main .img-container img {
+  width: 100%;
 }
 
-.about .aContainer .aLeft .aDescription {
+.about .about-container__main__text {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.about .about-container__main__text p {
   color: var(--primaryDark);
-  padding: 30px 0 25px;
+  padding: 0px 0 50px;
 }
 
-.about .aContainer .aLeft .moreAbout {
+.about .about-container__main__text a {
   background: -webkit-gradient(linear, left top, left bottom, from(var(--neutralShade)), to(var(--darkShade)));
   background: linear-gradient(var(--neutralShade), var(--darkShade));
   color: var(--primaryLight);
   text-decoration: none;
-  padding: 16px;
+  padding: 12px;
   width: 250px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-.about .aContainer .aLeft .moreAbout:hover {
+.about .about-container__main__text a:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(var(--lightShade)), to(var(--neutralShade)));
   background: linear-gradient(var(--lightShade), var(--neutralShade));
   color: var(--primaryDark);
 }
 
-.about .aContainer .aLeft .aSkillsTitle {
+.about .about-container__main .additional-info {
+  color: var(--primaryDark);
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  height: 0px;
+  opacity: 0;
+}
+
+.about .about-container__main .skillBox {
+  height: 0px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  opacity: 0;
+}
+
+.about .about-container__main .skillBox .aSkillsTitle {
   color: var(--neutralShade);
-  opacity: 0;
+  opacity: 1;
 }
 
-.about .aContainer .aLeft .aSkills {
-  opacity: 0;
+.about .about-container__main .skillBox .aSkills {
   width: 100%;
+  opacity: 1;
 }
 
-.about .aContainer .aLeft .aSkills .skillName {
+.about .about-container__main .skillBox .aSkills .skillName {
   font-size: .9rem;
 }
 
-.about .aContainer .aLeft .aSkills .fullBar {
+.about .about-container__main .skillBox .aSkills .fullBar {
   width: 100%;
   height: 20px;
   border: solid 1px var(--primaryDark);
@@ -358,9 +423,10 @@ nav .navContainer .navLinks a:hover::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 1;
 }
 
-.about .aContainer .aLeft .aSkills .fullBar .xd {
+.about .about-container__main .skillBox .aSkills .fullBar .xd {
   margin-left: 4px;
   height: 12px;
   width: 90%;
@@ -368,7 +434,7 @@ nav .navContainer .navLinks a:hover::after {
   border-radius: 10px;
 }
 
-.about .aContainer .aLeft .aSkills .fullBar .photoshop {
+.about .about-container__main .skillBox .aSkills .fullBar .photoshop {
   margin-left: 4px;
   height: 12px;
   width: 80%;
@@ -376,7 +442,7 @@ nav .navContainer .navLinks a:hover::after {
   border-radius: 10px;
 }
 
-.about .aContainer .aLeft .aSkills .fullBar .illustrator {
+.about .about-container__main .skillBox .aSkills .fullBar .illustrator {
   margin-left: 4px;
   height: 12px;
   width: 85%;
@@ -384,7 +450,7 @@ nav .navContainer .navLinks a:hover::after {
   border-radius: 10px;
 }
 
-.about .aContainer .aLeft .aSkills .fullBar .html {
+.about .about-container__main .skillBox .aSkills .fullBar .html {
   margin-left: 4px;
   height: 12px;
   width: 90%;
@@ -392,7 +458,7 @@ nav .navContainer .navLinks a:hover::after {
   border-radius: 10px;
 }
 
-.about .aContainer .aLeft .aSkills .fullBar .css {
+.about .about-container__main .skillBox .aSkills .fullBar .css {
   margin-left: 4px;
   height: 12px;
   width: 80%;
@@ -400,52 +466,12 @@ nav .navContainer .navLinks a:hover::after {
   border-radius: 10px;
 }
 
-.about .aContainer .aLeft .aSkills .fullBar .javascript {
+.about .about-container__main .skillBox .aSkills .fullBar .javascript {
   margin-left: 4px;
   height: 12px;
   width: 40%;
   background: var(--lightShade);
   border-radius: 10px;
-}
-
-.about .aContainer .aRight {
-  max-width: 450px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.about .aContainer .aRight .imgContainer {
-  height: 100%;
-}
-
-.about .aContainer .aRight .aImg {
-  height: auto;
-  width: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.about .aContainer .aRight .moreAbout {
-  text-decoration: none;
-  color: #3B342F;
-  padding: 10px 20px;
-  border: solid 1px #3B342F;
-  border-radius: 10px;
-  display: none;
-}
-
-.about .aContainer .aRight .moreAbout:hover {
-  background: #3B342F;
-  color: #DFC5B3;
-  border-color: #65806D;
 }
 
 .about .about-curves {
@@ -483,12 +509,13 @@ nav .navContainer .navLinks a:hover::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 40px;
   background: var(--primaryDark);
   z-index: 5;
 }
 
 .work .wContainer {
-  margin: 50px 0px 0px;
+  margin: 50px 5vw 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -809,6 +836,76 @@ nav .navContainer .navLinks a:hover::after {
   }
   .burgerMenu .barX {
     background: var(--primaryDark);
+  }
+  .about .about-container__main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .about-container__main .text-container {
+    min-width: 375px;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    min-height: 150px;
+  }
+  .about .about-container__main .text-container h2 {
+    position: relative;
+    text-align: center;
+    -webkit-transform: translateY(-275%);
+            transform: translateY(-275%);
+  }
+  .about .about-container__main .img-container {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .about .about-container__main .img-container img {
+    width: 250px;
+  }
+  .about .about-container__main__text {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 375px;
+  }
+  .about .about-container__main .skillBox {
+    width: 100%;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
