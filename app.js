@@ -104,7 +104,6 @@ let navMenu = document.querySelector('.navLinks');
 let topBar = document.querySelector('.top');
 let bottomBar = document.querySelector('.bottom');
 
-
 burger.addEventListener('click', ()=> {
     navMenu.classList.toggle('showMenu');
     topBar.classList.toggle('topRotation');
@@ -122,10 +121,3 @@ navMenu.addEventListener('click', ()=> {
 });
 
 
-$('body').on('click', '.dashboard_leftNav_category a', function() {
-    var link = $(this).attr('showSection'); //changed from let link
-    var show = $('[section="'+link+'"]');
-    $('[section]').hide();
-    $('body').find(show).fadeIn();
-    $('html,body').scrollTop(0);
-  });
