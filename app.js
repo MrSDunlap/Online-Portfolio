@@ -1,7 +1,7 @@
 // Document selectors-------------------------------------------/
-const welcome = document.querySelector('.home h1');
-const intro = document.querySelector('.home h3');
-const message = document.querySelector('.home p');
+let welcome = document.querySelector('.home h1');
+let intro = document.querySelector('.home h3');
+let message = document.querySelector('.home p');
 
 // Timelines----------------------------------------------------/
 let tl = new TimelineMax();
@@ -45,11 +45,11 @@ let scene = new ScrollMagic.Scene({
 
 // Trying to make an intersection observer --------------------------------------------/
 
-const navBar = document.querySelector('nav');
-const homeSection = document.querySelector('.home');
-const descSection = document.querySelector('.description');
-const bars = document.querySelector('.bars');
-const links = document.querySelectorAll('.links');
+let navBar = document.querySelector('nav');
+let homeSection = document.querySelector('.home');
+let descSection = document.querySelector('.description');
+let bars = document.querySelector('.bars');
+let links = document.querySelectorAll('.links');
 
 const faders = document.querySelectorAll('.fadeIn');
 
@@ -78,12 +78,12 @@ sectionOneObserver.observe(homeSection);
 
 
 //Text and image observer for fade in--------------------------------------------/
-const appearOptions = {
+let appearOptions = {
     threshold: 0,
     rootMargin: "0px 0px -500px 0px"
 };
 
-const appearOnScroll = new IntersectionObserver(function(entries,appearOnScroll) {
+let appearOnScroll = new IntersectionObserver(function(entries,appearOnScroll) {
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
             return;
