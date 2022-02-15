@@ -120,4 +120,15 @@ navMenu.addEventListener('click', ()=> {
     topBar.classList.toggle('barX');
 });
 
+//More about me button ------------------------------------------------------|
+const moreButton = document.querySelector('.moreAbout');
+const aboutDescription = document.querySelector('.additional-info');
+const aboutSkills = document.querySelector('.skillBox');
+
+moreButton.addEventListener('click', ()=> {
+    moreButton.classList.add('display-none');
+    aboutDescription.classList.remove('display-none');
+    aboutSkills.classList.remove('display-none');
+});
+
 
