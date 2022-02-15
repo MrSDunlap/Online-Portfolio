@@ -121,9 +121,9 @@ navMenu.addEventListener('click', ()=> {
 });
 
 //More about me button ------------------------------------------------------|
-const moreButton = document.querySelector('.moreAbout');
-const aboutDescription = document.querySelector('.additional-info');
-const aboutSkills = document.querySelector('.skillBox');
+let moreButton = document.querySelector('.moreAbout');
+let aboutDescription = document.querySelector('.additional-info');
+let aboutSkills = document.querySelector('.skillBox');
 
 moreButton.addEventListener('click', ()=> {
     moreButton.classList.add('display-none');
