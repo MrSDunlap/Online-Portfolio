@@ -343,9 +343,9 @@ nav .navContainer .navLinks a:hover::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -355,7 +355,10 @@ nav .navContainer .navLinks a:hover::after {
 }
 
 .about .about-container__main .img-container img {
-  width: 300px;
+  width: 350px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 5px var(--primaryDark);
+          box-shadow: 2px 2px 5px var(--primaryDark);
 }
 
 .about .about-container__main__text {
@@ -904,7 +907,8 @@ nav .navContainer .navLinks a:hover::after {
     grid-column: 1/2;
   }
   .about .about-container__main .img-container img {
-    width: 250px;
+    width: 325px;
+    margin-top: 40px;
   }
   .about .about-container__main__text {
     -ms-grid-column: 1;
