@@ -20,12 +20,12 @@
   font-weight: 900;
 }
 
-:root .about .about-container__main .text-container h2, .about .about-container__main .text-container :root h2, :root .work .wContainer .w-leftText .w-Title, .work .wContainer .w-leftText :root .w-Title, :root .contact .cContainer .cTitle, .contact .cContainer :root .cTitle {
+:root .home .info h1, .home .info :root h1, :root .about .about-container__main .text-container h2, .about .about-container__main .text-container :root h2, :root .work .wContainer .w-leftText .w-Title, .work .wContainer .w-leftText :root .w-Title, :root .contact .cContainer .cTitle, .contact .cContainer :root .cTitle {
   font-size: 3rem;
   font-weight: 700;
 }
 
-:root .home .info h1, .home .info :root h1, :root .about .about-container__main__text a, .about .about-container__main__text :root a, :root .about .about-container__main .skillBox .aSkillsTitle, .about .about-container__main .skillBox :root .aSkillsTitle, :root .work .wContainer .projects a .txtContainer .projectName, .work .wContainer .projects a .txtContainer :root .projectName, :root .contact form button, .contact form :root button {
+:root .about .about-container__main__text a, .about .about-container__main__text :root a, :root .about .about-container__main .skillBox .aSkillsTitle, .about .about-container__main .skillBox :root .aSkillsTitle, :root .work .wContainer .projects a .txtContainer .projectName, .work .wContainer .projects a .txtContainer :root .projectName, :root .contact form button, .contact form :root button {
   font-size: 1.5rem;
   font-weight: 500;
 }
