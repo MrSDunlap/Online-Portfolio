@@ -145,7 +145,7 @@ nav {
         width: 100%;
 
         h1 {
-            @extend%headerOne;
+            @extend%headerFive;
             color: var(--primaryDark);
             text-align: center;
         }
