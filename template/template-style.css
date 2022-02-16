@@ -187,6 +187,8 @@ nav .navContainer .navLinks a:hover::after {
   width: 350px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 0% 20%;
+     object-position: 0% 20%;
   border-radius: 10px;
   -webkit-box-shadow: 3px 3px 5px var(--darkShade);
           box-shadow: 3px 3px 5px var(--darkShade);
