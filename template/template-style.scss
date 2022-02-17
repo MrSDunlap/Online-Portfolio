@@ -63,7 +63,7 @@ nav {
         align-items: center;
         justify-content: space-between;
 
-        .logo {
+        .back {
             font-size: 2rem;
             font-weight: bold;
             align-self: center;
@@ -86,37 +86,6 @@ nav {
             }
             a:hover::after {
                 width: 110%;
-            }
-        }
-
-        .navLinks {
-            list-style: none;
-            display: flex;
-            align-self: center;
-
-            a {
-                position: relative;
-                color: inherit;
-                text-transform: uppercase;
-                font-size: 18px;
-                font-weight: 500;
-                list-style: none;
-                text-decoration: none;
-                margin-left: 20px;
-                display: flex;
-                justify-content : center;
-            }
-            a::after {
-                content: '';
-                background: var(--lightShade);
-                position: absolute;
-                width: 0%;
-                height: 2.5px;
-                bottom: -4px;
-                transition: .1s ease-in;
-            }
-            a:hover::after {
-                width: 100%;
             }
         }
     }
@@ -144,8 +113,9 @@ nav {
         max-width: 1000px;
         padding-bottom: 50px;
         margin: 0 5vw;
-        height: 425px;
+        padding: 50px 0;
         display: grid;
+        place-items: center;
         grid-template-columns: repeat(2, 1fr);
 
         .hero-title {
@@ -197,17 +167,19 @@ nav {
         padding: 50px 0 30px;
     }
     .persona-container {
-        width: 1000px;
-        height: 300px;
+        max-width: 1000px;
+        margin: 0 5vw;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
+        gap: 50px;
         padding-bottom: 50px;
         
 
         .persona-image {
             height: 250px;
-            width: 450px;
+            width: 400px;
             border-radius: 10px;
             box-shadow: 3px 3px 10px var(--primaryDark);
             object-fit: cover;
@@ -248,13 +220,17 @@ nav {
         padding-bottom: 50px;
     }
     .d-container {
-        width: 1000px;
+        max-width: 1000px;
+        margin: 0 5vw;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
         padding-bottom: 50px;
+           
         img {
-            width: 475px;
-            height: 300px;
+            max-width: 400px;
+            aspect-ratio: 1.75/1;
             object-fit: cover;
             object-position: 0% 20%;
             border-radius: 10px;
@@ -283,15 +259,17 @@ nav {
         text-align: justify;
     }
     .w-container {
+        max-width: 1000px;
+        margin: 0 5vw;
         display: grid;
-        grid-template-columns: repeat(2, 450px);
+        grid-template-columns: repeat(2, 1fr);
         place-content: center;
-        gap: 50px;
+        gap: 25px;
         padding: 50px 0;
 
         img {
-            width: 450px;
-            height: 450px;
+            width: 100%;
+            aspect-ratio: 1/1;
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 3px 3px 10px var(--primaryDark);
@@ -321,15 +299,17 @@ nav {
         text-align: justify;
     }
     .hf-container {
+        max-width: 1000px;
+        margin: 0 5vw;
         display: grid;
-        grid-template-columns: repeat(2, 450px);
+        grid-template-columns: repeat(2, 1fr);
         place-content: center;
-        gap: 50px;
+        gap: 25px;
         padding: 50px 0;
 
         img {
-            width: 450px;
-            height: 450px;
+            width: 100%;
+            aspect-ratio: 1/1;
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 3px 3px 10px var(--primaryDark);
@@ -393,62 +373,28 @@ nav {
 }
 //--MEDIA QUERIES-----------------------------------------------------------------|
 @media(max-width:850px) {
-    //nav------------------------------|
-    .navLinks {
-        position: absolute;
-        background: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(10px);
-        width: 100%;
-        height: 100vh;
-        margin: 0%;
-        top: 0;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-        transform: translateX(100%);
-        transition: 250ms ease-in-out;  
-    }
-    nav .navContainer .navLinks a {
-        font-size: 3rem;
-        color: white;
-    }
-    nav .navContainer .navLinks a::after {
-        height: 5px;
-    }
+    .hero {
+        .hero-container {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            .hero-title {
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+            .hero-picture {
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            .hero-description {
+                margin: 0 5vw;
+                grid-column: 1/2;
+                grid-row: 3/4
+            }
+        }    
+    } 
     
     
-    //NAVLINKS SLIDE IN----------------------------------------------|
-    .showMenu{
-        transform: translateX(-5%);
-    }
-    //BURGER MENU ---------------------------------------------------|
-    .burgerMenu {
-        width: 30px;
-        height: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        cursor: pointer;
-        z-index: 10;
-        
-        .bars {
-            width: 30px;
-            height: 3px;
-            background: var(--primaryLight);
-            transition: .5s ease-in-out;
-        }
-        .topRotation {
-            transform: rotate(225deg) translate(-4.5px, -4.5px);
-        }
-        .bottomRotation {
-            transform: rotate(-225deg) translate(-4.5px, 4.5px);
-
-        }
-        .barX {
-            background: var(--primaryDark);
-        }
-    }
+   
     
     
 }

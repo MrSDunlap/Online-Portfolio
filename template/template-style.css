@@ -62,7 +62,7 @@ nav .navContainer {
           justify-content: space-between;
 }
 
-nav .navContainer .logo {
+nav .navContainer .back {
   font-size: 2rem;
   font-weight: bold;
   -ms-flex-item-align: center;
@@ -70,14 +70,14 @@ nav .navContainer .logo {
       align-self: center;
 }
 
-nav .navContainer .logo a {
+nav .navContainer .back a {
   text-decoration: none;
   text-transform: uppercase;
   color: inherit;
   position: relative;
 }
 
-nav .navContainer .logo a::after {
+nav .navContainer .back a::after {
   content: '';
   position: absolute;
   left: -5%;
@@ -89,49 +89,8 @@ nav .navContainer .logo a::after {
   transition: .1s ease-in-out;
 }
 
-nav .navContainer .logo a:hover::after {
+nav .navContainer .back a:hover::after {
   width: 110%;
-}
-
-nav .navContainer .navLinks {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-
-nav .navContainer .navLinks a {
-  position: relative;
-  color: inherit;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: 500;
-  list-style: none;
-  text-decoration: none;
-  margin-left: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-nav .navContainer .navLinks a::after {
-  content: '';
-  background: var(--lightShade);
-  position: absolute;
-  width: 0%;
-  height: 2.5px;
-  bottom: -4px;
-  -webkit-transition: .1s ease-in;
-  transition: .1s ease-in;
-}
-
-nav .navContainer .navLinks a:hover::after {
-  width: 100%;
 }
 
 .navScrolled {
@@ -161,9 +120,10 @@ nav .navContainer .navLinks a:hover::after {
   max-width: 1000px;
   padding-bottom: 50px;
   margin: 0 5vw;
-  height: 425px;
+  padding: 50px 0;
   display: -ms-grid;
   display: grid;
+  place-items: center;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
 }
@@ -244,23 +204,26 @@ nav .navContainer .navLinks a:hover::after {
 }
 
 .persona .persona-container {
-  width: 1000px;
-  height: 300px;
+  max-width: 1000px;
+  margin: 0 5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 50px;
   padding-bottom: 50px;
 }
 
 .persona .persona-container .persona-image {
   height: 250px;
-  width: 450px;
+  width: 400px;
   border-radius: 10px;
   -webkit-box-shadow: 3px 3px 10px var(--primaryDark);
           box-shadow: 3px 3px 10px var(--primaryDark);
@@ -312,19 +275,23 @@ nav .navContainer .navLinks a:hover::after {
 }
 
 .deliverables .d-container {
-  width: 1000px;
+  max-width: 1000px;
+  margin: 0 5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
   padding-bottom: 50px;
 }
 
 .deliverables .d-container img {
-  width: 475px;
-  height: 300px;
+  max-width: 400px;
+  aspect-ratio: 1.75/1;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 0% 20%;
@@ -363,18 +330,20 @@ nav .navContainer .navLinks a:hover::after {
 }
 
 .wireframing .w-container {
+  max-width: 1000px;
+  margin: 0 5vw;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (450px)[2];
-      grid-template-columns: repeat(2, 450px);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   place-content: center;
-  gap: 50px;
+  gap: 25px;
   padding: 50px 0;
 }
 
 .wireframing .w-container img {
-  width: 450px;
-  height: 450px;
+  width: 100%;
+  aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
@@ -412,18 +381,20 @@ nav .navContainer .navLinks a:hover::after {
 }
 
 .high-fidelity .hf-container {
+  max-width: 1000px;
+  margin: 0 5vw;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (450px)[2];
-      grid-template-columns: repeat(2, 450px);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   place-content: center;
-  gap: 50px;
+  gap: 25px;
   padding: 50px 0;
 }
 
 .high-fidelity .hf-container img {
-  width: 450px;
-  height: 450px;
+  width: 100%;
+  aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
@@ -504,75 +475,35 @@ nav .navContainer .navLinks a:hover::after {
 }
 
 @media (max-width: 850px) {
-  .navLinks {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.6);
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-    width: 100%;
-    height: 100vh;
-    margin: 0%;
-    top: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 50px;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: 250ms ease-in-out;
-    transition: 250ms ease-in-out;
+  .hero .hero-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 30px;
   }
-  nav .navContainer .navLinks a {
-    font-size: 3rem;
-    color: white;
+  .hero .hero-container .hero-title {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
   }
-  nav .navContainer .navLinks a::after {
-    height: 5px;
+  .hero .hero-container .hero-picture {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
   }
-  .showMenu {
-    -webkit-transform: translateX(-5%);
-            transform: translateX(-5%);
-  }
-  .burgerMenu {
-    width: 30px;
-    height: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    cursor: pointer;
-    z-index: 10;
-  }
-  .burgerMenu .bars {
-    width: 30px;
-    height: 3px;
-    background: var(--primaryLight);
-    -webkit-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-  }
-  .burgerMenu .topRotation {
-    -webkit-transform: rotate(225deg) translate(-4.5px, -4.5px);
-            transform: rotate(225deg) translate(-4.5px, -4.5px);
-  }
-  .burgerMenu .bottomRotation {
-    -webkit-transform: rotate(-225deg) translate(-4.5px, 4.5px);
-            transform: rotate(-225deg) translate(-4.5px, 4.5px);
-  }
-  .burgerMenu .barX {
-    background: var(--primaryDark);
+  .hero .hero-container .hero-description {
+    margin: 0 5vw;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
   }
 }
 /*# sourceMappingURL=template-style.css.map */
