@@ -340,6 +340,23 @@ nav {
         padding: 50px 0;
     }
 }
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .t-title {
+        @extend%headerThree;
+        color: var(--neutralShade);
+    }
+    .t-desc {
+        @extend%headerFive;
+        color: var(--primaryDark);
+        padding: 20px 0 50px;
+        max-width: 600px;
+        margin: 0 5vw;
+    }
+}
 .future {
     height: auto;
     width: 100%;
