@@ -130,7 +130,6 @@ nav .navContainer .back a:hover::after {
 
 .hero .hero-container .hero-title {
   color: var(--primaryLight);
-  text-shadow: 0px 3px 5px var(--darkShade);
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
@@ -257,7 +256,6 @@ nav .navContainer .back a:hover::after {
 
 .deliverables .d-title {
   color: var(--primaryLight);
-  text-shadow: 0px 1px 3px var(--darkShade);
   text-align: center;
   margin: 0 5vw;
   padding: 30px 0;
