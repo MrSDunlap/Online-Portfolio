@@ -20,12 +20,22 @@
   font-weight: 700;
 }
 
-:root .persona .persona-title, .persona :root .persona-title, :root .deliverables .d-title, .deliverables :root .d-title, :root .wireframing .w-title, .wireframing :root .w-title, :root .high-fidelity .hf-title, .high-fidelity :root .hf-title, :root .future .f-title, .future :root .f-title {
+:root .persona .persona-title, .persona :root .persona-title, :root .deliverables .d-title, .deliverables :root .d-title, :root .wireframing .w-title, .wireframing :root .w-title, :root .high-fidelity .hf-title, .high-fidelity :root .hf-title, :root .prototype .p-title, .prototype :root .p-title, :root .future .f-title, .future :root .f-title {
   font-size: 2.25rem;
   font-weight: 700;
 }
 
-:root .hero .hero-container .hero-description, .hero .hero-container :root .hero-description, :root .persona .persona-container .persona-description, .persona .persona-container :root .persona-description, :root .deliverables .d-description, .deliverables :root .d-description, :root .wireframing .w-description, .wireframing :root .w-description, :root .high-fidelity .hf-description, .high-fidelity :root .hf-description, :root .future .f-description, .future :root .f-description {
+:root .deliverables .d-container .card-one__title, .deliverables .d-container :root .card-one__title, :root .deliverables .d-container .card-two__title, .deliverables .d-container :root .card-two__title, :root .deliverables .d-container .card-three__title, .deliverables .d-container :root .card-three__title {
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+
+:root .deliverables .d-container .card-one__pros h1, .deliverables .d-container .card-one__pros :root h1, :root .deliverables .d-container .card-one__cons h1, .deliverables .d-container .card-one__cons :root h1, :root .deliverables .d-container .card-two__pros h1, .deliverables .d-container .card-two__pros :root h1, :root .deliverables .d-container .card-two__cons h1, .deliverables .d-container .card-two__cons :root h1, :root .deliverables .d-container .card-three__pros h1, .deliverables .d-container .card-three__pros :root h1, :root .deliverables .d-container .card-three__cons h1, .deliverables .d-container .card-three__cons :root h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+:root .hero .hero-container .hero-description, .hero .hero-container :root .hero-description, :root .persona .persona-container .persona-description, .persona .persona-container :root .persona-description, :root .deliverables .d-description, .deliverables :root .d-description, :root .deliverables .d-container .card-one__pros li, .deliverables .d-container .card-one__pros :root li, :root .deliverables .d-container .card-one__cons li, .deliverables .d-container .card-one__cons :root li, :root .deliverables .d-container .card-two__pros li, .deliverables .d-container .card-two__pros :root li, :root .deliverables .d-container .card-two__cons li, .deliverables .d-container .card-two__cons :root li, :root .deliverables .d-container .card-three__pros li, .deliverables .d-container .card-three__pros :root li, :root .deliverables .d-container .card-three__cons li, .deliverables .d-container .card-three__cons :root li, :root .wireframing .w-description, .wireframing :root .w-description, :root .high-fidelity .hf-description, .high-fidelity :root .hf-description, :root .prototype .p-description, .prototype :root .p-description, :root .future .f-description, .future :root .f-description {
   font-size: 1rem;
   font-weight: 400;
 }
@@ -146,8 +156,8 @@ nav .navContainer .back a:hover::after {
   width: 350px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 0% 20%;
-     object-position: 0% 20%;
+  -o-object-position: 68% 20%;
+     object-position: 68% 20%;
   border-radius: 10px;
   -webkit-box-shadow: 3px 3px 5px var(--darkShade);
           box-shadow: 3px 3px 5px var(--darkShade);
@@ -228,8 +238,8 @@ nav .navContainer .back a:hover::after {
           box-shadow: 3px 3px 10px var(--primaryDark);
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 0% 60%;
-     object-position: 0% 60%;
+  -o-object-position: 0% 30%;
+     object-position: 0% 30%;
 }
 
 .persona .persona-container .persona-description {
@@ -273,7 +283,7 @@ nav .navContainer .back a:hover::after {
 }
 
 .deliverables .d-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 5vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -283,17 +293,175 @@ nav .navContainer .back a:hover::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 50px;
+  gap: 25px;
   padding-bottom: 50px;
 }
 
-.deliverables .d-container img {
-  max-width: 350px;
-  aspect-ratio: 1.75/1;
+.deliverables .d-container .card-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 325px;
+}
+
+.deliverables .d-container .card-one__title {
+  text-decoration: underline;
+  color: var(--primaryDark);
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.deliverables .d-container .card-one__image {
+  width: 300px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 0% 20%;
-     object-position: 0% 20%;
+  -o-object-position: 0 50%;
+     object-position: 0 50%;
+  border-radius: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.deliverables .d-container .card-one__pros {
+  padding-top: 30px;
+}
+
+.deliverables .d-container .card-one__pros h1 {
+  color: var(--primaryDark);
+  text-align: center;
+}
+
+.deliverables .d-container .card-one__pros li {
+  color: var(--primaryDark);
+}
+
+.deliverables .d-container .card-one__cons h1 {
+  color: var(--primaryDark);
+  text-align: center;
+}
+
+.deliverables .d-container .card-one__cons li {
+  color: var(--primaryDark);
+}
+
+.deliverables .d-container .card-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 325px;
+}
+
+.deliverables .d-container .card-two__title {
+  text-decoration: underline;
+  color: var(--primaryDark);
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.deliverables .d-container .card-two__image {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -o-object-position: 0 50%;
+     object-position: 0 50%;
+  border-radius: 10px;
+}
+
+.deliverables .d-container .card-two__pros {
+  padding-top: 30px;
+}
+
+.deliverables .d-container .card-two__pros h1 {
+  color: var(--primaryDark);
+  text-align: center;
+}
+
+.deliverables .d-container .card-two__pros li {
+  color: var(--primaryDark);
+}
+
+.deliverables .d-container .card-two__cons h1 {
+  color: var(--primaryDark);
+  text-align: center;
+}
+
+.deliverables .d-container .card-two__cons li {
+  color: var(--primaryDark);
+}
+
+.deliverables .d-container .card-three {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 325px;
+}
+
+.deliverables .d-container .card-three__title {
+  text-decoration: underline;
+  color: var(--primaryDark);
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.deliverables .d-container .card-three__image {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -o-object-position: 0 50%;
+     object-position: 0 50%;
+  border-radius: 10px;
+}
+
+.deliverables .d-container .card-three__pros {
+  padding-top: 30px;
+}
+
+.deliverables .d-container .card-three__pros h1 {
+  color: var(--primaryDark);
+  text-align: center;
+}
+
+.deliverables .d-container .card-three__pros li {
+  color: var(--primaryDark);
+}
+
+.deliverables .d-container .card-three__cons h1 {
+  color: var(--primaryDark);
+  text-align: center;
+}
+
+.deliverables .d-container .card-three__cons li {
+  color: var(--primaryDark);
+}
+
+.d-container {
+  max-width: 1000px;
+}
+
+.d-container img {
+  max-width: 70%;
   border-radius: 10px;
   -webkit-box-shadow: 3px 3px 10px var(--darkShade);
           box-shadow: 3px 3px 10px var(--darkShade);
@@ -379,7 +547,7 @@ nav .navContainer .back a:hover::after {
 }
 
 .high-fidelity .hf-container {
-  max-width: 1000px;
+  max-width: 500px;
   margin: 0 5vw;
   display: -ms-grid;
   display: grid;
@@ -392,12 +560,43 @@ nav .navContainer .back a:hover::after {
 
 .high-fidelity .hf-container img {
   width: 100%;
-  aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 10px;
-  -webkit-box-shadow: 3px 3px 10px var(--primaryDark);
-          box-shadow: 3px 3px 10px var(--primaryDark);
+}
+
+.prototype {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  padding: 10px 0 50px;
+}
+
+.prototype .p-title {
+  color: var(--neutralShade);
+}
+
+.prototype .p-description {
+  color: var(--primaryDark);
+  max-width: 900px;
+  text-align: center;
+  padding-top: 40px;
+  margin: 0 5vw;
+}
+
+.prototype iframe {
+  max-width: 375px;
+  max-height: 900px;
+  margin: 0 5vw;
 }
 
 .future {
