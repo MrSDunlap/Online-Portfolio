@@ -129,7 +129,7 @@ nav {
             height: 350px;
             width: 350px;
             object-fit: cover;
-            object-position: 0% 20%;
+            object-position: 40% 0%;
             border-radius: 10px;
             box-shadow: 3px 3px 5px var(--darkShade);
             align-self: center;
@@ -181,7 +181,7 @@ nav {
             border-radius: 10px;
             box-shadow: 3px 3px 10px var(--primaryDark);
             object-fit: cover;
-            object-position: 0% 60%;
+            object-position: 0% 0%;
         }
         .persona-description {
             @extend%paragraph;
@@ -227,12 +227,39 @@ nav {
            
         img {
             max-width: 350px;
-            aspect-ratio: 1.75/1;
+            aspect-ratio: 1/.8;
             object-fit: cover;
-            object-position: 0% 20%;
+            object-position: 0% 0%;
             border-radius: 10px;
             box-shadow: 3px 3px 10px var(--darkShade);
         }
+    }
+}
+.prototype {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+
+    .p-title {
+        @extend%headerThree;
+        color: var(--neutralShade);
+        padding-top: 50px
+    }
+    .p-description {
+        @extend%paragraph;
+        color: var(--primaryDark);
+        max-width: 900px;
+        text-align: justify;
+        padding-top: 40px;
+        margin: 0 5vw;
+    }
+    iframe {
+        max-width: 800px;
+        max-height: 600px;
+        margin: 0 5vw;
+        padding: 50px 0;
     }
 }
 .wireframing {
