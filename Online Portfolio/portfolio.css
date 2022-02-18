@@ -299,6 +299,11 @@ nav .navContainer .back a:hover::after {
           box-shadow: 3px 3px 10px var(--darkShade);
 }
 
+.deliverables .d-container .scheme {
+  max-width: 400px;
+  aspect-ratio: 1/1.2;
+}
+
 .prototype {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -460,7 +465,7 @@ nav .navContainer .back a:hover::after {
 }
 
 .future .f-description {
-  color: var(--primaryDark);
+  color: var(--primaryLight);
   max-width: 900px;
   margin: 0 5vw;
   text-align: justify;

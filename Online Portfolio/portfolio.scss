@@ -233,6 +233,10 @@ nav {
             border-radius: 10px;
             box-shadow: 3px 3px 10px var(--darkShade);
         }
+        .scheme {
+            max-width: 400px;
+            aspect-ratio: 1/1.2;
+        }
     }
 }
 .prototype {
@@ -357,7 +361,7 @@ nav {
     }
     .f-description {
         @extend%paragraph;
-        color: var(--primaryDark);
+        color: var(--primaryLight);
         max-width: 900px;
         margin: 0 5vw;
         text-align: justify;
