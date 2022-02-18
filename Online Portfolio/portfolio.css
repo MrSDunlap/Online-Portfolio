@@ -300,7 +300,7 @@ nav .navContainer .back a:hover::after {
 }
 
 .deliverables .d-container .scheme {
-  max-width: 400px;
+  max-width: 350px;
   aspect-ratio: 1/1.2;
 }
 
@@ -544,6 +544,12 @@ nav .navContainer .back a:hover::after {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3/4;
+  }
+  .prototype iframe {
+    max-width: 350px;
+    max-height: 300px;
+    margin: 0 5vw;
+    padding: 50px 0;
   }
 }
 /*# sourceMappingURL=portfolio.css.map */
