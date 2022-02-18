@@ -129,7 +129,7 @@ nav {
             height: 350px;
             width: 350px;
             object-fit: cover;
-            object-position: 0% 20%;
+            object-position: 50% 20%;
             border-radius: 10px;
             box-shadow: 3px 3px 5px var(--darkShade);
             align-self: center;
@@ -176,8 +176,9 @@ nav {
         
 
         .persona-image {
-            height: 250px;
-            width: 350px;
+            
+            max-width: 85%;
+            margin: 0 5vw;
             border-radius: 10px;
             box-shadow: 3px 3px 10px var(--primaryDark);
             object-fit: cover;
@@ -186,7 +187,7 @@ nav {
         .persona-description {
             @extend%paragraph;
             color: var(--primaryDark);
-            max-width: 500px;
+            max-width: 900px;
             text-align: justify;
         }
     }
@@ -226,7 +227,7 @@ nav {
         padding-bottom: 50px;
            
         img {
-            max-width: 350px;
+            max-width: 100%;
             aspect-ratio: 1.75/1;
             object-fit: cover;
             object-position: 0% 20%;
